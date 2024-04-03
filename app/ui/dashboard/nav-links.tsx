@@ -22,11 +22,12 @@ const links = [
 ];
 
 export default function NavLinks() {
+    const path = usePathname();
+
     return (
         <>
             {links.map((link) => {
                 const LinkIcon = link.icon;
-                const path = usePathname();
                 return (
                     <Link
                         key={link.name}
